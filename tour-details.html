@@ -1,0 +1,42 @@
+<!-- tour-details.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tour Details - Travel Explorer</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <!-- Container -->
+  <div class="max-w-4xl mx-auto mt-10 px-4 sm:px-6 lg:px-8">
+    <!-- Tour Info -->
+    <div id="tourInfo" class="bg-white w-100 h-120 p-6 rounded-lg shadow space-y-4">
+      <!-- Dynamic content will be injected here -->
+    </div>
+
+    <!-- Booking Section -->
+    <div class="bg-white p-6 rounded-lg shadow mt-8">
+      <h2 class="text-xl font-semibold mb-4">Book this Tour</h2>
+      <form id="bookingForm" class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Travel Date</label>
+          <input type="date" name="travelDate" class="mt-1 block w-full border border-gray-300 px-4 py-2 rounded-md shadow-sm" required />
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Number of Guests</label>
+          <input type="number" name="guests" min="1" class="mt-1 block w-full border border-gray-300 px-4 py-2 rounded-md shadow-sm" required />
+        </div>
+        <div>
+          <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded">
+            Book Now
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/tour-details.js"></script>
+</body>
+</html>

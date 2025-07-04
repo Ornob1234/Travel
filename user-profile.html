@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Profile - Travel Explorer</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <!-- Header -->
+  <header class="bg-white shadow w-full fixed z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-blue-600">My Profile</h1>
+      <a href="index.html" class="text-sm text-blue-500 hover:underline">Back to Home</a>
+    </div>
+  </header>
+
+  <main class="pt-28 max-w-5xl mx-auto px-6">
+    <section class="bg-white p-6 rounded-lg shadow mb-10">
+      <h2 class="text-2xl font-semibold mb-4">User Information</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <p class="text-sm text-gray-500">Name</p>
+          <p id="userName" class="text-lg font-semibold">Loading...</p>
+        </div>
+        <div>
+          <p class="text-sm text-gray-500">Email</p>
+          <p id="userEmail" class="text-lg font-semibold">Loading...</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-2xl font-semibold mb-6">My Bookings</h2>
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-sm text-left">
+          <thead class="bg-gray-50 text-gray-700">
+            <tr>
+              <th class="px-6 py-4">Tour</th>
+              <th class="px-6 py-4">Date</th>
+              <th class="px-6 py-4">Price</th>
+              <th class="px-6 py-4">Status</th>
+              <th class="px-6 py-4 text-right">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="bookingList" class="text-gray-800 divide-y divide-gray-100">
+            <!-- Dynamic Rows -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 mt-20 py-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center text-sm">&copy; 2025 Travel Explorer. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/user-profile.js"></script>
+</body>
+</html>

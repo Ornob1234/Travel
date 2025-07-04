@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Tour - Travel Explorer</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <!-- Header -->
+  <header class="bg-white shadow w-full fixed top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <h1 class="text-xl font-bold text-blue-600">Travel Explorer</h1>
+      <a href="index.html" class="text-sm text-blue-500 hover:underline">Home</a>
+    </div>
+  </header>
+
+  <!-- Booking Form -->
+  <main class="pt-28 max-w-3xl mx-auto px-6">
+    <h2 class="text-2xl font-semibold mb-6">Book Your Tour</h2>
+    <form id="bookingForm" class="bg-white shadow-md rounded-lg p-6 space-y-4">
+      <div>
+        <label class="block text-sm font-medium">Full Name</label>
+        <input type="text" name="name" required class="mt-1 w-full px-4 py-2 border border-gray-300 rounded" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Email</label>
+        <input type="email" name="email" required class="mt-1 w-full px-4 py-2 border border-gray-300 rounded" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Tour</label>
+        <select name="tour" required class="mt-1 w-full px-4 py-2 border border-gray-300 rounded">
+          <option value="">Select a Tour</option>
+          <option value="paris">Paris Getaway</option>
+          <option value="bali">Bali Escape</option>
+          <option value="newyork">New York Adventure</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Date</label>
+        <input type="date" name="date" required class="mt-1 w-full px-4 py-2 border border-gray-300 rounded" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Guests</label>
+        <input type="number" name="guests" min="1" max="10" required class="mt-1 w-full px-4 py-2 border border-gray-300 rounded" />
+      </div>
+      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Confirm Booking</button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 mt-20 py-10">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="text-sm">&copy; 2025 Travel Explorer. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/booking.js"></script>
+</body>
+</html>
